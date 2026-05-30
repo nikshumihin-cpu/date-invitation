@@ -127,6 +127,10 @@ restaurantChoices.forEach(button => {
     button.addEventListener("click", () => {
 
         const restaurantName = button.dataset.name;
+        window.open(
+`https://docs.google.com/forms/d/e/1FAIpQLSdtkyYBiDRqYRiLy6HFoIh641ZnxlXUz4E36kciEs0DXl1XAw/viewform?usp=pp_url&entry.1395006012=${encodeURIComponent(restaurantName)}`,
+"_blank"
+);
 
         localStorage.setItem("restaurantChoice", restaurantName);
 
