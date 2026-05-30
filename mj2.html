@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ ✨</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>
+        🕺 А после предлагаю
+        <br><br>
+        пойти со мной на фильм
+        <br><br>
+        про Майкла Джексона ✨
+    </h1>
+
+    <img
+        class="mj-gif"
+        src="https://media.giphy.com/media/100ak1Sn7F3ius/giphy.gif"
+    >
+
+    <div class="buttons">
+
+        <button id="mj-yes-button">
+            ❤️ Очень хочу
+        </button>
+
+        <button id="no-button">
+            Неа
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+const noButton = document.getElementById("no-button");
+
+let moveX = 0;
+
+noButton.addEventListener("mouseover", () => {
+
+    moveX = moveX === 0 ? 120 : 0;
+
+    noButton.style.transform = `translateX(${moveX}px)`;
+
+});
+
+const yesButton = document.getElementById("mj-yes-button");
+
+yesButton.addEventListener("click", () => {
+
+    document.body.innerHTML = `
+        <div class="container">
+
+            <h1>
+                Тогда с тебя только
+                <br><br>
+                прекрасный образ ✨
+                <br><br>
+                и твоя улыбка 💖
+            </h1>
+
+            <p class="date-text">
+                Потому что я хочу,
+                чтобы это был
+                наш лучший вечер 🌙
+            </p>
+
+            <button id="requirements-button">
+                🎁 Кажется, я кое-что ещё приготовил
+            </button>
+
+        </div>
+    `;
+
+    const requirementsButton =
+        document.getElementById("requirements-button");
+
+    requirementsButton.addEventListener("click", () => {
+
+        window.location.href = "requirements.html";
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
